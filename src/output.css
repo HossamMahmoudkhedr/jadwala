@@ -1444,8 +1444,12 @@ video {
   padding-top: 5rem;
 }
 
-.pt-44 {
-  padding-top: 11rem;
+.pt-36 {
+  padding-top: 9rem;
+}
+
+.pt-32 {
+  padding-top: 8rem;
 }
 
 .text-center {
