@@ -1447,6 +1447,10 @@ video {
   padding-top: 11rem;
 }
 
+.pt-32 {
+  padding-top: 8rem;
+}
+
 .text-center {
   text-align: center;
 }
