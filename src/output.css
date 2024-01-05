@@ -1298,12 +1298,29 @@ video {
   overflow: hidden;
 }
 
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-b {
   border-bottom-width: 1px;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-\[\#EBEBEB\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(235 235 235 / var(--tw-border-opacity));
 }
 
 .border-\[\#F2F2F2\] {
@@ -1427,26 +1444,6 @@ video {
   padding-top: 5rem;
 }
 
-.pt-36 {
-  padding-top: 9rem;
-}
-
-.pt-44 {
-  padding-top: 11rem;
-}
-
-.pt-\[9rem\] {
-  padding-top: 9rem;
-}
-
-.pt-\[10rem\] {
-  padding-top: 10rem;
-}
-
-.pt-\[11rem\] {
-  padding-top: 11rem;
-}
-
 .pt-32 {
   padding-top: 8rem;
 }
@@ -1483,6 +1480,12 @@ video {
 
 .opacity-\[0\.6\] {
   opacity: 0.6;
+}
+
+.shadow-small {
+  --tw-shadow: -7px 11px 34px 0px rgba(0, 0, 0, 0.06);
+  --tw-shadow-colored: -7px 11px 34px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .dropdown li a:hover {
