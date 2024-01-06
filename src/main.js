@@ -1,6 +1,9 @@
 import { feautres } from './data/featuresData.js';
+import { annualyPrices } from './data/pricesData.js';
+import { questions } from './data/questionsData.js';
 
 // Select Elements
+// Main page
 const featuresContainer = document.querySelector('.left');
 const dropdownIcon = document.querySelector('#dropdown > span');
 const dropdownList = document.querySelector('#dropdown ul');
@@ -8,11 +11,16 @@ const menuIcon = document.querySelector('.menu-icon');
 const CloseIcon = document.querySelector('.close-icon');
 const menuList = document.querySelector('.menu');
 
+//Prices page
+const plansBtns = document.querySelectorAll('.switch-plans button');
+const pricesContainer = document.querySelector('.prices');
+const questionsContainer = document.querySelector('.questions');
+
 const setFeaturesContent = () => {
 	let html = ``;
 	feautres.map((feautre) => {
 		html += `
-        <div class="card rounded-lg shadow-small border border-solid border-[#EBEBEB] w-full p-4 flex gap-4">
+        <div class="card rounded-lg border w-full p-4 gap-4">
         <span>
             ${feautre.icon}
         </span>
@@ -23,7 +31,9 @@ const setFeaturesContent = () => {
         </div>
         `;
 	});
-	featuresContainer.innerHTML = html;
+	if (featuresContainer) {
+		featuresContainer.innerHTML = html;
+	}
 };
 
 const ShowDropdownList = () => {
@@ -42,7 +52,98 @@ const hideMenList = () => {
 	menuIcon.classList.remove('hide');
 };
 
+const setPricesContent = (prices) => {
+	let html = '';
+	prices.map((price) => {
+		html += `
+			<div
+				class="card sm:w-[356px] w-[95%] flex-col gap-5 border-2 rounded-2xl justify-between items-center py-9 px-5">
+				<h4 class="text-[24px] font-[600]">${price.plan}</h4>
+				<p><span class="text-[24px] font-bold ${
+					price.price == 0 ? 'text-[#666]' : ''
+				}">${price.price}</span> ريال / الشهر / للعضو</p>
+				<button class="styled-button w-full">ابدأ الآن</button>
+					<ul class="w-full flex flex-col gap-4">
+					${price.properities
+						.map(
+							(properity, i) =>
+								`<li class='text-right ${
+									price.price > 0 && i === 0 ? 'opacity-[1]' : 'opacity-[0.6]'
+								} flex gap-1 items-start'><span>•</span><p>${properity}</p></li>`
+						)
+						.join('')}
+					</ul>
+				
+			</div>
+		`;
+	});
+	if (pricesContainer) {
+		pricesContainer.innerHTML = html;
+	}
+};
+
+window.showAnswer = (e) => {
+	let questionContainer = e.target.parentElement.parentElement.parentElement;
+	if (questionContainer.classList.contains('question')) {
+		if (questionContainer.classList.contains('show-answer')) {
+			questionContainer.classList.remove('show-answer');
+		} else {
+			questionContainer.classList.add('show-answer');
+		}
+	}
+};
+
+const setQuestionsContent = () => {
+	let html = ``;
+	questions.map((question) => {
+		// lg:h-[55px] h-[60px]
+		html += `
+			<div
+				class="question card flex-col gap-4 rounded-[9px] transition-all overflow-hidden w-full border py-4 px-6">
+				<div class="flex justify-between items-center w-full">
+					<h5 class="font-[500]">${question.question}</h5>
+					<span class="cursor-pointer w-5 h-7 flex justify-center items-center transition-all" onclick="showAnswer(event)">
+						<svg
+							width="14"
+							height="9"
+							viewBox="0 0 14 9"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								id="Vector 1424"
+								d="M1 1.5L7 7.5L13 1.5"
+								stroke="#969696"
+								stroke-width="1.5"
+								stroke-linecap="round" />
+						</svg>
+					</span>
+				</div>
+				<div class='hidden'>
+					<p class="opacity-[0.6]">
+						${question.answer}
+					</p>
+				</div>
+			</div>
+		`;
+	});
+	if (questionsContainer) {
+		questionsContainer.innerHTML = html;
+	}
+};
+
+// Switch between plans
+plansBtns.forEach((btn) => {
+	btn.onclick = (e) => {
+		plansBtns.forEach((btn) => {
+			btn.classList.remove('active');
+		});
+		e.currentTarget.classList.add('active');
+	};
+});
+
 setFeaturesContent();
+setPricesContent(annualyPrices);
+setQuestionsContent();
 
 dropdownIcon.addEventListener('click', ShowDropdownList);
 menuIcon.addEventListener('click', showMenuList);

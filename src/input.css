@@ -9,6 +9,13 @@
 .show {
 	display: flex;
 }
+.show-answer div:last-child {
+	/* height: 94px; */
+	display: block;
+}
+.show-answer span {
+	transform: rotateX(180deg);
+}
 .hide {
 	display: none;
 }
@@ -53,6 +60,26 @@
 	.custom-heading {
 		font-size: 39px;
 		font-weight: 600;
+	}
+	.card {
+		display: flex;
+		box-shadow: -7px 11px 34px 0px rgba(0, 0, 0, 0.06);
+		border-style: solid;
+		border-color: #ebebeb;
+	}
+	.switch-plans button {
+		padding: 12px 24px;
+		border-radius: inherit;
+	}
+	.switch-plans button.active {
+		background-color: #eef3fc;
+	}
+	.switch-plans button.active p {
+		color: #0c58db;
+		font-weight: 500;
+	}
+	.switch-plans button p {
+		opacity: 0.6;
 	}
 	.footer-links,
 	.footer-links ul {

@@ -10,6 +10,7 @@ module.exports = {
 			},
 			colors: {
 				myBlue: '#0C58DB',
+				lightBlue: '#EEF3FC',
 				lightYellow: '#f6f5e5',
 				lightGreen: '#f0f9f2',
 			},
