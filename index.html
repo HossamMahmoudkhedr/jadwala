@@ -23,11 +23,11 @@
 		<title>جدولة</title>
 	</head>
 	<body>
-		<div class="">
+		<div class="2xl:container 2xl:mx-auto relative">
 			<!-- Start navbar -->
 			<!-- border-b border-[#F2F2F2] -->
 			<nav
-				class="fixed w-full border-b border-[#F2F2F2] bg-white z-30 py-4 lg:px-16 px-4 flex flex-row justify-between items-center font-semibold">
+				class="sticky top-0 left-0 w-full border-b border-[#F2F2F2] bg-white z-30 py-4 lg:px-16 px-4 flex flex-row justify-between items-center font-semibold">
 				<div class="logo">
 					<svg
 						width="103"
@@ -158,9 +158,9 @@
 			<!-- End navbar -->
 			<!-- Start Hero section -->
 			<div
-				class="custom-section lg:h-[100vh] flex justify-center items-center text-center relative lg:pt-16 pt-32 pb-10">
+				class="custom-section h-[100vh] lg:h-[90vh] align-section justify-center relative lg:pt-0 lg:pb-0 pt-20 pb-10">
 				<span
-					class="hidden lg:absolute-circle top-36 xl:right-80 lg:right-48 bg-[#f0f4f9] p-5">
+					class="hidden lg:absolute-circle top-24 xl:right-72 lg:right-40 bg-[#f0f4f9] p-5">
 					<svg
 						width="70"
 						height="69"
@@ -176,7 +176,7 @@
 					</svg>
 				</span>
 				<span
-					class="hidden lg:absolute-circle bottom-32 xl:right-60 lg:right-24 bg-lightYellow p-12">
+					class="hidden lg:absolute-circle bottom-36 xl:right-40 lg:right-16 bg-lightYellow p-12">
 					<svg
 						width="88"
 						height="87"
@@ -192,7 +192,7 @@
 					</svg>
 				</span>
 				<span
-					class="hidden lg:absolute-circle xl:bottom-52 lg:bottom-72 xl:left-60 lg:left-20 bg-lightGreen p-8">
+					class="hidden lg:absolute-circle xl:bottom-64 lg:bottom-64 xl:left-56 lg:left-14 bg-lightGreen p-8">
 					<svg
 						width="79"
 						height="79"
@@ -207,8 +207,7 @@
 						</g>
 					</svg>
 				</span>
-
-				<div class="prose flex flex-col gap-4 text-center items-center">
+				<div class="prose flex flex-col gap-4 items-center">
 					<h1 class="text-[40px] lg:text-6xl font-semibold m-0">
 						نظام جدولة مجاني
 					</h1>
@@ -267,8 +266,8 @@
 			<!-- End Hero section -->
 			<!-- Start Second Section -->
 			<div
-				class="custom-section flex flex-col items-center pt-20 pb-16 overflow-hidden">
-				<div class="flex flex-col items-center text-center w-4/5 lg:w-full">
+				class="custom-section align-section flex-col pt-20 pb-16 overflow-hidden">
+				<div class="flex flex-col items-center w-4/5 lg:w-full">
 					<h2 class="custom-heading hidden lg:block w-[555px] mb-5">
 						مكن عملاءك من جدولة مواعيدهم وتعديلها بأنفسهم
 					</h2>
@@ -305,7 +304,7 @@
 			<div
 				class="custom-section flex xl:flex-row flex-col justify-between items-center py-20 xl:px-44 px-4 gap-8 xl:gap-0">
 				<div
-					class="xl:w-1/4 lg:w-1/3 md:w-full w-[85%] xl:text-right text-center">
+					class="xl:w-1/4 lg:w-1/3 md:w-full w-[85%] lg:text-right text-center">
 					<h2 class="custom-heading mb-3">شارك أوقات الحجز المتاحة لفريقك</h2>
 					<p class="leading-8">
 						قم بإدارة جميع حجوزات فريقك من حساب واحد واسمح لعملائك باختيار من
@@ -318,22 +317,22 @@
 			<!-- End Features Section -->
 			<!-- Start Payments Section -->
 			<div
-				class="custom-section flex lg:flex-row flex-col-reverse lg:gap-28 items-center py-16 lg:p-0">
+				class="custom-section flex lg:flex-row-reverse flex-col lg:gap-28 items-center py-16 lg:p-0">
+				<div class="lg:text-right text-center w-2/3">
+					<h2 class="custom-heading mb-3">قبول المدفوعات</h2>
+					<p>بدون عمولة استقبل مدفوعات حجوزاتك قبل تأكيد الحجز</p>
+				</div>
 				<div>
 					<img
 						src="./src/assets/images/payments.png"
 						alt="" />
-				</div>
-				<div class="lg:text-right text-center w-2/3">
-					<h2 class="custom-heading mb-3">قبول المدفوعات</h2>
-					<p>بدون عمولة استقبل مدفوعات حجوزاتك قبل تأكيد الحجز</p>
 				</div>
 			</div>
 			<!-- End Payments Section -->
 			<!-- Start Programs Section -->
 			<div
 				class="custom-section flex lg:flex-row flex-col justify-between items-center lg:px-40 py-14">
-				<div class="xl:w-[26%] md:w-full w-[85%] text-center">
+				<div class="xl:w-[26%] md:w-full w-[85%] lg:text-right text-center">
 					<h2 class="custom-heading mb-3">ارتبط مع كل شيئ بكل سهولة</h2>
 					<p class="leading-8">
 						تكامل البرامج مع جدولة يجعل عملك اسهل وشامل بجعل كل شئ يعمل في مكان
@@ -376,8 +375,8 @@
 			<!-- End Remote Section -->
 			<!-- Start Try Now Section -->
 			<div
-				class="custom-section flex flex-col items-center gap-5 py-32 xl:px-96 px-6">
-				<div class="text-center">
+				class="custom-section align-section flex-col gap-5 py-32 xl:px-96 px-6">
+				<div>
 					<h2 class="custom-heading mb-5">يمكنك تجربته الآن مجاناً</h2>
 					<p>مكن عملائك من جدولة مواعيدهم وإعادة جدولتها بأنفسهم بكل سهولة</p>
 				</div>

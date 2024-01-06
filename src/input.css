@@ -43,6 +43,13 @@
 		background-color: #fafafa;
 		border-bottom: 6px solid white;
 	}
+	.align-section {
+		display: flex;
+		align-items: center;
+	}
+	.align-section > div {
+		text-align: center;
+	}
 	.custom-heading {
 		font-size: 39px;
 		font-weight: 600;
