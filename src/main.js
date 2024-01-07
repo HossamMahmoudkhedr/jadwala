@@ -1,9 +1,11 @@
+import { TC } from './data/TCData.js';
 import { feautres } from './data/featuresData.js';
 import { annualyPrices } from './data/pricesData.js';
+import { PP } from './data/privacyPolicyData.js';
 import { questions } from './data/questionsData.js';
 
 // Select Elements
-// Main page
+// Main Page
 const featuresContainer = document.querySelector('.left');
 const dropdownIcon = document.querySelector('#dropdown > span');
 const dropdownList = document.querySelector('#dropdown ul');
@@ -11,10 +13,16 @@ const menuIcon = document.querySelector('.menu-icon');
 const CloseIcon = document.querySelector('.close-icon');
 const menuList = document.querySelector('.menu');
 
-//Prices page
+//Prices Page
 const plansBtns = document.querySelectorAll('.switch-plans button');
 const pricesContainer = document.querySelector('.prices');
 const questionsContainer = document.querySelector('.questions');
+
+// Terms and Conditions Page
+const TCContainer = document.querySelector('.tc');
+
+// Privacy and Policy Page
+const PPContainer = document.querySelector('.pp');
 
 const setFeaturesContent = () => {
 	let html = ``;
@@ -141,9 +149,28 @@ plansBtns.forEach((btn) => {
 	};
 });
 
+const setTCandPPContent = (container, data) => {
+	let html = ``;
+	data.map((item) => {
+		html += `
+		<div>
+		<h3 class="text-xl font-medium mb-5">${item.title}</h3>
+		<div class="flex flex-col gap-7">
+		${item.content.map((el) => `<p>${el}</p>`).join('')}
+		</div>
+		</div>
+		`;
+	});
+	if (container) {
+		container.innerHTML = html;
+	}
+};
+
 setFeaturesContent();
 setPricesContent(annualyPrices);
 setQuestionsContent();
+setTCandPPContent(TCContainer, TC);
+setTCandPPContent(PPContainer, PP);
 
 dropdownIcon.addEventListener('click', ShowDropdownList);
 menuIcon.addEventListener('click', showMenuList);
