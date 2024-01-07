@@ -96,7 +96,7 @@ const setPricesContent = (prices) => {
 };
 
 window.showAnswer = (e) => {
-	let questionContainer = e.target.parentElement.parentElement.parentElement;
+	let questionContainer = e.currentTarget.parentElement;
 	if (questionContainer.classList.contains('question')) {
 		if (questionContainer.classList.contains('show-answer')) {
 			questionContainer.classList.remove('show-answer');
@@ -113,9 +113,9 @@ const setQuestionsContent = () => {
 		html += `
 			<div
 				class="question card flex-col gap-4 rounded-[9px] transition-all overflow-hidden w-full border py-4 px-6">
-				<div class="flex justify-between items-center w-full">
+				<div class="flex justify-between items-center w-full cursor-pointer" onclick="showAnswer(event)">
 					<h5 class="font-[500]">${question.question}</h5>
-					<span class="cursor-pointer w-5 h-7 flex justify-center items-center transition-all" onclick="showAnswer(event)">
+					<span class="w-5 h-7 flex justify-center items-center transition-all" >
 						<svg
 							width="14"
 							height="9"
@@ -184,7 +184,7 @@ const setOptions = () => {
 };
 
 const makeInputNumbers = (e) => {
-	e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, '');
+	if (!/[0-9]/g.test(e.key) && e.key !== 'Backspace') e.preventDefault();
 };
 
 setFeaturesContent();
@@ -197,4 +197,4 @@ setOptions();
 dropdownIcon.addEventListener('click', ShowDropdownList);
 menuIcon.addEventListener('click', showMenuList);
 CloseIcon.addEventListener('click', hideMenList);
-phone.addEventListener('input', makeInputNumbers);
+phone.addEventListener('keydown', makeInputNumbers);

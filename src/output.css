@@ -1172,6 +1172,14 @@ video {
   top: 160%;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1263,6 +1271,10 @@ video {
   height: 60px;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1323,6 +1335,38 @@ video {
   width: 100%;
 }
 
+.w-\[1200px\] {
+  width: 1200px;
+}
+
+.w-2\/4 {
+  width: 50%;
+}
+
+.w-1\/4 {
+  width: 25%;
+}
+
+.w-\[30\%\] {
+  width: 30%;
+}
+
+.w-\[1280px\] {
+  width: 1280px;
+}
+
+.w-\[25\%\] {
+  width: 25%;
+}
+
+.w-\[66\%\] {
+  width: 66%;
+}
+
+.max-w-\[1200px\] {
+  max-width: 1200px;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -1357,6 +1401,14 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1409,6 +1461,18 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-12 {
+  gap: 3rem;
+}
+
+.gap-16 {
+  gap: 4rem;
+}
+
+.gap-20 {
+  gap: 5rem;
 }
 
 .overflow-hidden {
@@ -1591,6 +1655,11 @@ video {
   padding-right: 0.25rem;
 }
 
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1625,6 +1694,10 @@ video {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-\[61px\] {
+  padding-top: 61px;
 }
 
 .text-center {
@@ -2003,6 +2076,14 @@ form label {
     width: 100%;
   }
 
+  .md\:w-\[1280px\] {
+    width: 1280px;
+  }
+
+  .md\:w-\[30\%\] {
+    width: 30%;
+  }
+
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -2124,6 +2205,14 @@ form label {
     width: 50%;
   }
 
+  .lg\:w-\[1280px\] {
+    width: 1280px;
+  }
+
+  .lg\:w-\[30\%\] {
+    width: 30%;
+  }
+
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -2172,6 +2261,14 @@ form label {
     gap: 1.5rem;
   }
 
+  .lg\:gap-32 {
+    gap: 8rem;
+  }
+
+  .lg\:gap-20 {
+    gap: 5rem;
+  }
+
   .lg\:rounded-xl {
     border-radius: 0.75rem;
   }
@@ -2215,6 +2312,16 @@ form label {
     padding-bottom: 0.75rem;
   }
 
+  .lg\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .lg\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
   .lg\:pb-0 {
     padding-bottom: 0px;
   }
@@ -2234,6 +2341,10 @@ form label {
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .lg\:text-\[61px\] {
+    font-size: 61px;
   }
 
   .lg\:shadow-l {
@@ -2286,6 +2397,10 @@ form label {
     width: 34%;
   }
 
+  .xl\:w-\[33\%\] {
+    width: 33%;
+  }
+
   .xl\:max-w-screen-xl {
     max-width: 1280px;
   }
@@ -2306,6 +2421,30 @@ form label {
     gap: 0px;
   }
 
+  .xl\:gap-40 {
+    gap: 10rem;
+  }
+
+  .xl\:gap-9 {
+    gap: 2.25rem;
+  }
+
+  .xl\:gap-12 {
+    gap: 3rem;
+  }
+
+  .xl\:gap-20 {
+    gap: 5rem;
+  }
+
+  .xl\:gap-24 {
+    gap: 6rem;
+  }
+
+  .xl\:gap-32 {
+    gap: 8rem;
+  }
+
   .xl\:px-44 {
     padding-left: 11rem;
     padding-right: 11rem;
@@ -2314,6 +2453,26 @@ form label {
   .xl\:px-96 {
     padding-left: 24rem;
     padding-right: 24rem;
+  }
+
+  .xl\:px-48 {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+
+  .xl\:px-60 {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+
+  .xl\:px-80 {
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+
+  .xl\:px-64 {
+    padding-left: 16rem;
+    padding-right: 16rem;
   }
 
   .xl\:text-right {
@@ -2325,5 +2484,9 @@ form label {
   .\32xl\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .\32xl\:w-\[1280px\] {
+    width: 1280px;
   }
 }
