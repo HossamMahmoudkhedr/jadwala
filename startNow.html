@@ -23,10 +23,11 @@
 		<title>جدولة</title>
 	</head>
 	<body>
-		<div class="2xl:container 2xl:mx-auto relative">
+		<!-- 2xl:container -->
+		<div class="2xl:mx-auto relative">
 			<!-- Start navbar -->
 			<nav
-				class="sticky top-0 left-0 w-full border-b border-[#F2F2F2] bg-white z-30 py-4 lg:px-16 px-4 flex flex-row justify-between items-center font-semibold">
+				class="2xl:container mx-auto sticky top-0 left-0 w-full border-b border-[#F2F2F2] bg-white z-30 py-4 lg:px-16 px-4 flex flex-row justify-between items-center font-semibold">
 				<div class="logo">
 					<a href="./index.html">
 						<svg
@@ -120,7 +121,9 @@
 							class="btn w-1/2 lg:w-auto bg-lightBlue rounded-xl text-myBlue py-[10px] px-4">
 							تسجيل الدخول
 						</button>
-						<button class="styled-button w-1/2 lg:w-auto">ابدأ الآن</button>
+						<a href="./startNow.html">
+							<button class="styled-button w-1/2 lg:w-auto">ابدأ الآن</button>
+						</a>
 					</div>
 				</div>
 				<div class="lg:hidden cursor-pointer">
@@ -157,23 +160,132 @@
 				</div>
 			</nav>
 			<!-- End navbar -->
-			<!-- Start Try Now Section -->
-			<div
-				class="custom-section align-section flex-col gap-5 py-32 xl:px-96 px-6">
-				<div>
-					<h2 class="custom-heading mb-5">يمكنك تجربته الآن مجاناً</h2>
-					<p>مكن عملائك من جدولة مواعيدهم وإعادة جدولتها بأنفسهم بكل سهولة</p>
-				</div>
-				<div class="flex flex-col items-center">
-					<button class="styled-button mb-6">جربه الآن مجاناً</button>
-					<div class="flex gap-2 lg:justify-center opacity-[0.6]">
-						<p>لاتحتاج إلى بطاقة ائتمانية</p>
-						<p>•</p>
-						<p>بدون عمولة</p>
+			<!-- Start Form Section -->
+			<div class="custom-section pt-16 pb-20">
+				<div class="xl:container mx-auto xl:max-w-screen-xl relative">
+					<span class="absolute hidden xl:block bottom-[-80px] right-[-121px]">
+						<svg
+							width="341"
+							height="280"
+							viewBox="0 0 341 280"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<g
+								opacity="0.1"
+								clip-path="url(#clip0_1_700)">
+								<path
+									d="M479.751 165.97C479.578 165.97 479.409 165.917 479.267 165.818L244.434 2.45305C243.72 1.95821 242.871 1.69376 242.001 1.69525C241.131 1.69673 240.283 1.96407 239.57 2.46133L6.42926 165.817C6.24486 165.946 6.01663 165.997 5.79478 165.958C5.57292 165.919 5.37562 165.794 5.24627 165.609C5.11693 165.425 5.06614 165.197 5.10507 164.976C5.14401 164.754 5.26948 164.557 5.45389 164.428L238.595 1.07225C239.593 0.376178 240.781 0.00200651 241.998 8.04732e-06C243.216 -0.00199041 244.404 0.368277 245.405 1.06107L480.237 164.426C480.386 164.529 480.497 164.677 480.556 164.848C480.614 165.019 480.616 165.204 480.562 165.376C480.508 165.549 480.4 165.699 480.254 165.806C480.108 165.913 479.932 165.97 479.751 165.97Z"
+									fill="#3F3D56" />
+								<path
+									d="M19.7559 171.763L242.236 7.05786L466.405 183.482L253.699 309.439L138.219 283.145L19.7559 171.763Z"
+									fill="#E6E6E6" />
+								<path
+									d="M245.363 263.499C244.528 263.5 243.701 263.338 242.927 263.022L105.717 206.152V28.1378C105.719 26.5637 106.345 25.0546 107.46 23.9415C108.574 22.8284 110.085 22.2023 111.661 22.2004H374.889C376.465 22.2023 377.975 22.8284 379.09 23.9415C380.204 25.0546 380.831 26.5637 380.833 28.1378V206.276L380.575 206.386L247.874 262.995C247.079 263.328 246.225 263.5 245.363 263.499Z"
+									fill="white" />
+								<path
+									d="M245.36 263.922C244.469 263.923 243.587 263.751 242.762 263.414L105.289 206.434V28.1371C105.29 26.4505 105.962 24.8336 107.156 23.641C108.35 22.4484 109.969 21.7775 111.657 21.7756H374.885C376.573 21.7775 378.192 22.4484 379.386 23.641C380.58 24.8336 381.252 26.4505 381.253 28.1371V206.555L248.037 263.384C247.189 263.74 246.279 263.923 245.36 263.922ZM106.987 205.301L243.409 261.846C244.682 262.362 246.107 262.353 247.373 261.822L379.555 205.436V28.1371C379.554 26.9003 379.061 25.7146 378.186 24.84C377.31 23.9655 376.123 23.4735 374.885 23.472H111.657C110.419 23.4735 109.232 23.9655 108.356 24.84C107.481 25.7146 106.988 26.9003 106.987 28.1371L106.987 205.301Z"
+									fill="#3F3D56" />
+								<path
+									d="M478.056 164.274H477.886L380.407 205.853L247.035 262.741C246.514 262.96 245.955 263.074 245.39 263.077C244.824 263.08 244.264 262.972 243.741 262.758L106.14 205.734L6.26643 164.342L6.11385 164.274H5.94386C4.36799 164.276 2.85715 164.902 1.74284 166.015C0.628531 167.128 0.00174856 168.637 0 170.211V428.063C0.0017508 429.637 0.628532 431.146 1.74284 432.259C2.85715 433.372 4.36799 433.998 5.94386 434H478.056C479.632 433.998 481.143 433.372 482.257 432.259C483.371 431.146 483.998 429.637 484 428.063V170.211C483.998 168.637 483.371 167.128 482.257 166.015C481.143 164.902 479.632 164.276 478.056 164.274ZM482.302 428.063C482.301 429.187 481.854 430.266 481.058 431.061C480.262 431.856 479.182 432.303 478.056 432.304H5.94386C4.81799 432.303 3.73837 431.856 2.94226 431.061C2.14615 430.266 1.6987 429.187 1.69825 428.063V170.211C1.69979 169.115 2.12566 168.061 2.88683 167.271C3.648 166.48 4.68554 166.014 5.78258 165.97L106.14 207.566L243.087 264.327C244.57 264.93 246.231 264.92 247.706 264.302L380.407 207.693L478.226 165.97C479.321 166.018 480.356 166.485 481.115 167.275C481.874 168.065 482.299 169.116 482.302 170.211V428.063Z"
+									fill="#3F3D56" />
+								<path
+									d="M228.561 185.011C225.556 185.016 222.631 184.04 220.227 182.23L220.078 182.118L188.69 157.982C187.236 156.864 186.016 155.469 185.099 153.877C184.183 152.284 183.587 150.527 183.347 148.703C183.106 146.88 183.226 145.027 183.699 143.25C184.171 141.474 184.988 139.808 186.102 138.348C187.216 136.888 188.605 135.663 190.19 134.742C191.775 133.821 193.526 133.223 195.341 132.982C197.157 132.74 199.001 132.86 200.771 133.335C202.54 133.81 204.199 134.63 205.652 135.749L225.983 151.405L274.028 88.4779C275.142 87.0184 276.532 85.7936 278.117 84.8734C279.703 83.9532 281.453 83.3558 283.269 83.1151C285.085 82.8744 286.929 82.9952 288.699 83.4706C290.468 83.946 292.126 84.7668 293.579 85.8859L293.281 86.2932L293.587 85.8918C296.518 88.1545 298.436 91.4926 298.92 95.1737C299.404 98.8549 298.414 102.578 296.168 105.528L239.656 179.545C238.349 181.251 236.668 182.631 234.744 183.579C232.82 184.527 230.704 185.016 228.561 185.011Z"
+									fill="#0C58DB" />
+							</g>
+							<defs>
+								<clipPath id="clip0_1_700">
+									<rect
+										width="484"
+										height="434"
+										fill="white" />
+								</clipPath>
+							</defs>
+						</svg>
+					</span>
+					<div
+						class="flex xl:flex-row flex-col lg:gap-24 gap-6 items-center xl:items-start justify-center">
+						<div
+							class="flex flex-col gap-2 xl:w-[34%] md:w-[50%] w-[90%] text-center xl:text-right lg:pt-8 pt-4">
+							<h2 class="custom-heading">
+								تخلص من المحادثات والاتصالات الطويلة للعثور على الوقت المناسب
+							</h2>
+							<p class="opacity-[0.6] font-[500]">
+								تواصل معنا اليوم لنساعدك في بدأ رحلتك الخاصة
+							</p>
+						</div>
+						<form
+							class="flex flex-col gap-4 items-center shadow-formShadow rounded-xl py-8 lg:px-12 px-5 lg:w-auto w-[90%] bg-white">
+							<div>
+								<label for="fname">الاسم كامل</label>
+								<div class="flex gap-6 flex-col lg:flex-row lg:w-auto w-full">
+									<input
+										class="styled-input"
+										type="text"
+										id="fname"
+										name="fname"
+										placeholder="الاسم الاول"
+										maxlength="40"
+										required />
+									<input
+										class="styled-input"
+										type="text"
+										id="lname"
+										name="lname"
+										placeholder="الاسم الاخير"
+										maxlength="40"
+										required />
+								</div>
+							</div>
+							<div>
+								<label for="email">البريد الالكتروني</label>
+								<input
+									class="styled-input w-full"
+									dir="ltr"
+									type="email"
+									id="email"
+									name="email"
+									placeholder="Name@email.com"
+									required />
+							</div>
+							<div>
+								<label for="phone">رقم الجوال</label>
+								<div
+									class="styled-input w-full"
+									dir="ltr">
+									<select
+										class="w-[14%] mx-1"
+										name="countryCode"
+										id="countryCode"></select>
+									<input
+										class="w-3/4"
+										type="text"
+										id="phone"
+										name="phone"
+										maxlength="11"
+										placeholder="0000000000"
+										required />
+								</div>
+							</div>
+							<div>
+								<label for="notes">ملاحظات</label>
+								<textarea
+									name="notes"
+									id="notes"
+									cols="30"
+									rows="3"
+									class="resize-none styled-input w-full"
+									placeholder="ما الشكوي او المقترح؟"></textarea>
+							</div>
+							<button
+								type="submit"
+								class="styled-button w-full">
+								ارسال
+							</button>
+						</form>
 					</div>
 				</div>
 			</div>
-			<!-- End Try Now Section -->
+			<!-- End Form Section -->
 
 			<!-- Start Footer -->
 			<footer class="px-16">
@@ -250,7 +362,7 @@
 					<div class="footer-links">
 						<h6>اخرى</h6>
 						<ul>
-							<li><a href="./contact.html">تواصل معنا</a></li>
+							<li><a href="#">تواصل معنا</a></li>
 							<li><a href="#">API</a></li>
 						</ul>
 					</div>
@@ -462,6 +574,8 @@
 			</footer>
 			<!-- End Footer -->
 		</div>
-		<script type="module src="./src/main.js"></script>
+		<script
+			type="module"
+			src="./src/main.js"></script>
 	</body>
 </html>

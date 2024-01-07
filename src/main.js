@@ -1,4 +1,5 @@
 import { TC } from './data/TCData.js';
+import { countryCodes } from './data/countryCodes.js';
 import { feautres } from './data/featuresData.js';
 import { annualyPrices } from './data/pricesData.js';
 import { PP } from './data/privacyPolicyData.js';
@@ -18,11 +19,15 @@ const plansBtns = document.querySelectorAll('.switch-plans button');
 const pricesContainer = document.querySelector('.prices');
 const questionsContainer = document.querySelector('.questions');
 
-// Terms and Conditions Page
+// TC Page
 const TCContainer = document.querySelector('.tc');
 
-// Privacy and Policy Page
+// PrivacyPolicy Page
 const PPContainer = document.querySelector('.pp');
+
+// StartNow page
+const select = document.getElementById('countryCode');
+const phone = document.getElementById('phone');
 
 const setFeaturesContent = () => {
 	let html = ``;
@@ -166,12 +171,30 @@ const setTCandPPContent = (container, data) => {
 	}
 };
 
+const setOptions = () => {
+	let html = ``;
+	countryCodes.map((el) => {
+		html += `
+			<option id=${el.name} value=${el.code}>${el.code}</option>
+		`;
+	});
+	if (select) {
+		select.innerHTML = html;
+	}
+};
+
+const makeInputNumbers = (e) => {
+	e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, '');
+};
+
 setFeaturesContent();
 setPricesContent(annualyPrices);
 setQuestionsContent();
 setTCandPPContent(TCContainer, TC);
 setTCandPPContent(PPContainer, PP);
+setOptions();
 
 dropdownIcon.addEventListener('click', ShowDropdownList);
 menuIcon.addEventListener('click', showMenuList);
 CloseIcon.addEventListener('click', hideMenList);
+phone.addEventListener('input', makeInputNumbers);
