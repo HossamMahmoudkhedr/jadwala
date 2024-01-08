@@ -1,8 +1,8 @@
-export const annualyPrices = [
+export const prices = [
 	{
 		id: 1,
 		plan: 'المجانيــــة',
-		price: '0',
+		price: ['0', '0'],
 		properities: [
 			'صفحة حجز بشعارك وألوان هويتك',
 			'نوع حدث واحد وعدد غير محدود من الاجتماعات',
@@ -15,7 +15,7 @@ export const annualyPrices = [
 	{
 		id: 2,
 		plan: 'الأساسيــــة',
-		price: '1.5',
+		price: ['1.5', '3'],
 		properities: [
 			'جميع مزايا الباقة المجانية',
 			'إنشاء أحداث جماعية غير محدودة',
@@ -30,7 +30,7 @@ export const annualyPrices = [
 	{
 		id: 3,
 		plan: 'المتقدمــــة',
-		price: '1.5',
+		price: ['1.5', '5'],
 		properities: [
 			'جميع مزايا الباقة الأساسية',
 			'إنشاء أحداث جولة روبن غير محدودة',

@@ -2269,6 +2269,42 @@ form label {
     gap: 5rem;
   }
 
+  .lg\:gap-40 {
+    gap: 10rem;
+  }
+
+  .lg\:gap-\[158px\] {
+    gap: 158px;
+  }
+
+  .lg\:gap-\[140px\] {
+    gap: 140px;
+  }
+
+  .lg\:gap-\[130px\] {
+    gap: 130px;
+  }
+
+  .lg\:gap-\[120px\] {
+    gap: 120px;
+  }
+
+  .lg\:gap-\[80px\] {
+    gap: 80px;
+  }
+
+  .lg\:gap-36 {
+    gap: 9rem;
+  }
+
+  .lg\:gap-44 {
+    gap: 11rem;
+  }
+
+  .lg\:gap-\[160px\] {
+    gap: 160px;
+  }
+
   .lg\:rounded-xl {
     border-radius: 0.75rem;
   }
@@ -2401,6 +2437,10 @@ form label {
     width: 33%;
   }
 
+  .xl\:w-2\/5 {
+    width: 40%;
+  }
+
   .xl\:max-w-screen-xl {
     max-width: 1280px;
   }
@@ -2445,6 +2485,14 @@ form label {
     gap: 8rem;
   }
 
+  .xl\:gap-\[80px\] {
+    gap: 80px;
+  }
+
+  .xl\:gap-\[120px\] {
+    gap: 120px;
+  }
+
   .xl\:px-44 {
     padding-left: 11rem;
     padding-right: 11rem;
@@ -2481,6 +2529,10 @@ form label {
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:m-auto {
+    margin: auto;
+  }
+
   .\32xl\:mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -2488,5 +2540,9 @@ form label {
 
   .\32xl\:w-\[1280px\] {
     width: 1280px;
+  }
+
+  .\32xl\:w-\[30\%\] {
+    width: 30%;
   }
 }

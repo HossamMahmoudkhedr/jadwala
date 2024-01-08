@@ -1,7 +1,7 @@
 import { TC } from './data/TCData.js';
 import { countryCodes } from './data/countryCodes.js';
 import { feautres } from './data/featuresData.js';
-import { annualyPrices } from './data/pricesData.js';
+import { prices } from './data/pricesData.js';
 import { PP } from './data/privacyPolicyData.js';
 import { questions } from './data/questionsData.js';
 
@@ -65,7 +65,7 @@ const hideMenList = () => {
 	menuIcon.classList.remove('hide');
 };
 
-const setPricesContent = (prices) => {
+const setPricesContent = (prices, plan) => {
 	let html = '';
 	prices.map((price) => {
 		html += `
@@ -73,8 +73,8 @@ const setPricesContent = (prices) => {
 				class="card sm:w-[356px] w-[95%] flex-col gap-5 border-2 rounded-2xl justify-between items-center py-9 px-5">
 				<h4 class="text-[24px] font-[600]">${price.plan}</h4>
 				<p><span class="text-[24px] font-bold ${
-					price.price == 0 ? 'text-[#666]' : ''
-				}">${price.price}</span> ريال / الشهر / للعضو</p>
+					price.price[plan] == 0 ? 'text-[#666]' : ''
+				}">${price.price[plan]}</span> ريال / الشهر / للعضو</p>
 				<button class="styled-button w-full">ابدأ الآن</button>
 					<ul class="w-full flex flex-col gap-4">
 					${price.properities
@@ -144,13 +144,16 @@ const setQuestionsContent = () => {
 	}
 };
 
+let plan = 0;
 // Switch between plans
 plansBtns.forEach((btn) => {
 	btn.onclick = (e) => {
+		plan = btn.getAttribute('data-plan');
 		plansBtns.forEach((btn) => {
 			btn.classList.remove('active');
 		});
 		e.currentTarget.classList.add('active');
+		setPricesContent(prices, plan);
 	};
 });
 
@@ -188,7 +191,7 @@ const makeInputNumbers = (e) => {
 };
 
 setFeaturesContent();
-setPricesContent(annualyPrices);
+setPricesContent(prices, plan);
 setQuestionsContent();
 setTCandPPContent(TCContainer, TC);
 setTCandPPContent(PPContainer, PP);
@@ -197,4 +200,4 @@ setOptions();
 dropdownIcon.addEventListener('click', ShowDropdownList);
 menuIcon.addEventListener('click', showMenuList);
 CloseIcon.addEventListener('click', hideMenList);
-phone.addEventListener('keydown', makeInputNumbers);
+if (phone) phone.addEventListener('keydown', makeInputNumbers);
