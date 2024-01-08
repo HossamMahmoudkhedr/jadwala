@@ -221,6 +221,7 @@
 							</p>
 						</div>
 						<form
+							id="startForm"
 							class="flex flex-col gap-4 items-center shadow-formShadow rounded-xl py-8 lg:px-12 px-5 lg:w-auto w-[90%] bg-white">
 							<div>
 								<label for="fname">الاسم كامل</label>
@@ -254,7 +255,7 @@
 									placeholder="Name@email.com"
 									required />
 							</div>
-							<div>
+							<div id="phoneNumber">
 								<label for="phone">رقم الجوال</label>
 								<div
 									class="styled-input w-full"
@@ -271,6 +272,9 @@
 										maxlength="11"
 										placeholder="0000000000"
 										required />
+								</div>
+								<div class="error-message text-red-500 hidden">
+									من فضلك ادخل رقم الهاتف مكون من 11 رقم
 								</div>
 							</div>
 							<div>

@@ -1132,12 +1132,12 @@ video {
   left: -86px;
 }
 
-.right-2 {
-  right: 0.5rem;
+.right-0 {
+  right: 0px;
 }
 
-.right-\[-121px\] {
-  right: -121px;
+.right-2 {
+  right: 0.5rem;
 }
 
 .right-\[-71px\] {
@@ -1172,14 +1172,6 @@ video {
   top: 160%;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
-.right-0 {
-  right: 0px;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -1196,19 +1188,14 @@ video {
   margin: 0px;
 }
 
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.mx-1 {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
 }
 
 .mb-16 {
@@ -1283,14 +1270,6 @@ video {
   width: 91.666667%;
 }
 
-.w-2\/3 {
-  width: 66.666667%;
-}
-
-.w-3\/4 {
-  width: 75%;
-}
-
 .w-4\/5 {
   width: 80%;
 }
@@ -1319,6 +1298,10 @@ video {
   width: 555px;
 }
 
+.w-\[66\%\] {
+  width: 66%;
+}
+
 .w-\[85\%\] {
   width: 85%;
 }
@@ -1333,38 +1316,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[1200px\] {
-  width: 1200px;
-}
-
-.w-2\/4 {
-  width: 50%;
-}
-
-.w-1\/4 {
-  width: 25%;
-}
-
-.w-\[30\%\] {
-  width: 30%;
-}
-
-.w-\[1280px\] {
-  width: 1280px;
-}
-
-.w-\[25\%\] {
-  width: 25%;
-}
-
-.w-\[66\%\] {
-  width: 66%;
-}
-
-.max-w-\[1200px\] {
-  max-width: 1200px;
 }
 
 .cursor-pointer {
@@ -1401,10 +1352,6 @@ video {
 
 .items-center {
   align-items: center;
-}
-
-.justify-start {
-  justify-content: flex-start;
 }
 
 .justify-end {
@@ -1461,18 +1408,6 @@ video {
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-12 {
-  gap: 3rem;
-}
-
-.gap-16 {
-  gap: 4rem;
-}
-
-.gap-20 {
-  gap: 5rem;
 }
 
 .overflow-hidden {
@@ -1650,16 +1585,6 @@ video {
   padding-bottom: 5px;
 }
 
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
-}
-
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1678,10 +1603,6 @@ video {
 
 .pb-9 {
   padding-bottom: 2.25rem;
-}
-
-.pl-1 {
-  padding-left: 0.25rem;
 }
 
 .pt-16 {
@@ -1766,6 +1687,11 @@ video {
 .text-myBlue {
   --tw-text-opacity: 1;
   color: rgb(12 88 219 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1876,6 +1802,19 @@ form input,
   border: none;
 }
 
+form div.error .styled-input {
+  border: 1px solid rgb(239, 68, 68);
+  color: rgb(239, 68, 68);
+}
+
+form div.error .styled-input select {
+  color: black;
+}
+
+form div.error .error-message {
+  display: block;
+}
+
 select {
   font-size: 14px;
 }
@@ -1968,42 +1907,6 @@ form label {
   display: none;
 }
 
-@media (min-width: 1280px) {
-  .xl\:container {
-    width: 100%;
-  }
-
-  @media (min-width: 640px) {
-    .xl\:container {
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .xl\:container {
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .xl\:container {
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .xl\:container {
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-    .xl\:container {
-      max-width: 1536px;
-    }
-  }
-}
-
 @media (min-width: 1536px) {
   .\32xl\:container {
     width: 100%;
@@ -2055,11 +1958,6 @@ form label {
     top: -20px;
   }
 
-  .md\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
   .md\:w-\[105\%\] {
     width: 105%;
   }
@@ -2074,19 +1972,6 @@ form label {
 
   .md\:w-full {
     width: 100%;
-  }
-
-  .md\:w-\[1280px\] {
-    width: 1280px;
-  }
-
-  .md\:w-\[30\%\] {
-    width: 30%;
-  }
-
-  .md\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
   }
 
   .md\:text-xl {
@@ -2134,11 +2019,6 @@ form label {
 
   .lg\:top-\[58px\] {
     top: 58px;
-  }
-
-  .lg\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
   }
 
   .lg\:mb-auto {
@@ -2193,24 +2073,16 @@ form label {
     width: 190px;
   }
 
+  .lg\:w-\[30\%\] {
+    width: 30%;
+  }
+
   .lg\:w-auto {
     width: auto;
   }
 
   .lg\:w-full {
     width: 100%;
-  }
-
-  .lg\:w-\[50\%\] {
-    width: 50%;
-  }
-
-  .lg\:w-\[1280px\] {
-    width: 1280px;
-  }
-
-  .lg\:w-\[30\%\] {
-    width: 30%;
   }
 
   .lg\:grid-cols-4 {
@@ -2241,12 +2113,12 @@ form label {
     gap: 0px;
   }
 
-  .lg\:gap-24 {
-    gap: 6rem;
+  .lg\:gap-20 {
+    gap: 5rem;
   }
 
-  .lg\:gap-28 {
-    gap: 7rem;
+  .lg\:gap-24 {
+    gap: 6rem;
   }
 
   .lg\:gap-3 {
@@ -2259,50 +2131,6 @@ form label {
 
   .lg\:gap-6 {
     gap: 1.5rem;
-  }
-
-  .lg\:gap-32 {
-    gap: 8rem;
-  }
-
-  .lg\:gap-20 {
-    gap: 5rem;
-  }
-
-  .lg\:gap-40 {
-    gap: 10rem;
-  }
-
-  .lg\:gap-\[158px\] {
-    gap: 158px;
-  }
-
-  .lg\:gap-\[140px\] {
-    gap: 140px;
-  }
-
-  .lg\:gap-\[130px\] {
-    gap: 130px;
-  }
-
-  .lg\:gap-\[120px\] {
-    gap: 120px;
-  }
-
-  .lg\:gap-\[80px\] {
-    gap: 80px;
-  }
-
-  .lg\:gap-36 {
-    gap: 9rem;
-  }
-
-  .lg\:gap-44 {
-    gap: 11rem;
-  }
-
-  .lg\:gap-\[160px\] {
-    gap: 160px;
   }
 
   .lg\:rounded-xl {
@@ -2338,6 +2166,11 @@ form label {
     padding-right: 11rem;
   }
 
+  .lg\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
   .lg\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -2346,16 +2179,6 @@ form label {
   .lg\:py-3 {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-  }
-
-  .lg\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .lg\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
   }
 
   .lg\:pb-0 {
@@ -2372,11 +2195,6 @@ form label {
 
   .lg\:text-right {
     text-align: right;
-  }
-
-  .lg\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
   }
 
   .lg\:text-\[61px\] {
@@ -2425,24 +2243,16 @@ form label {
     width: 25%;
   }
 
-  .xl\:w-\[26\%\] {
-    width: 26%;
-  }
-
-  .xl\:w-\[34\%\] {
-    width: 34%;
-  }
-
-  .xl\:w-\[33\%\] {
-    width: 33%;
-  }
-
   .xl\:w-2\/5 {
     width: 40%;
   }
 
-  .xl\:max-w-screen-xl {
-    max-width: 1280px;
+  .xl\:w-\[26\%\] {
+    width: 26%;
+  }
+
+  .xl\:w-\[33\%\] {
+    width: 33%;
   }
 
   .xl\:flex-row {
@@ -2457,30 +2267,6 @@ form label {
     align-items: flex-start;
   }
 
-  .xl\:gap-0 {
-    gap: 0px;
-  }
-
-  .xl\:gap-40 {
-    gap: 10rem;
-  }
-
-  .xl\:gap-9 {
-    gap: 2.25rem;
-  }
-
-  .xl\:gap-12 {
-    gap: 3rem;
-  }
-
-  .xl\:gap-20 {
-    gap: 5rem;
-  }
-
-  .xl\:gap-24 {
-    gap: 6rem;
-  }
-
   .xl\:gap-32 {
     gap: 8rem;
   }
@@ -2489,38 +2275,9 @@ form label {
     gap: 80px;
   }
 
-  .xl\:gap-\[120px\] {
-    gap: 120px;
-  }
-
-  .xl\:px-44 {
-    padding-left: 11rem;
-    padding-right: 11rem;
-  }
-
   .xl\:px-96 {
     padding-left: 24rem;
     padding-right: 24rem;
-  }
-
-  .xl\:px-48 {
-    padding-left: 12rem;
-    padding-right: 12rem;
-  }
-
-  .xl\:px-60 {
-    padding-left: 15rem;
-    padding-right: 15rem;
-  }
-
-  .xl\:px-80 {
-    padding-left: 20rem;
-    padding-right: 20rem;
-  }
-
-  .xl\:px-64 {
-    padding-left: 16rem;
-    padding-right: 16rem;
   }
 
   .xl\:text-right {
@@ -2529,10 +2286,6 @@ form label {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:m-auto {
-    margin: auto;
-  }
-
   .\32xl\:mx-auto {
     margin-left: auto;
     margin-right: auto;

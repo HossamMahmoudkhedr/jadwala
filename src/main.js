@@ -28,6 +28,8 @@ const PPContainer = document.querySelector('.pp');
 // StartNow page
 const select = document.getElementById('countryCode');
 const phone = document.getElementById('phone');
+const form = document.getElementById('startForm');
+const inputs = document.querySelectorAll('input');
 
 const setFeaturesContent = () => {
 	let html = ``;
@@ -178,7 +180,9 @@ const setOptions = () => {
 	let html = ``;
 	countryCodes.map((el) => {
 		html += `
-			<option id=${el.name} value=${el.code}>${el.code}</option>
+			<option id=${el.name} value=${el.code} ${
+			el.name === 'SaudiArabia' ? `selected="selected"` : ''
+		}>${el.code}</option>
 		`;
 	});
 	if (select) {
@@ -190,6 +194,20 @@ const makeInputNumbers = (e) => {
 	if (!/[0-9]/g.test(e.key) && e.key !== 'Backspace') e.preventDefault();
 };
 
+const handleSubmit = (e) => {
+	let data = {};
+	inputs.forEach((input) => {
+		data[input.name] = input.value;
+	});
+	data[select.name] = select.value;
+	if (Object.keys(data).length < 5 || data.phone.length < 11) {
+		e.preventDefault();
+	}
+	if (data.phone.length < 11) {
+		document.querySelector('#phoneNumber').classList.add('error');
+	}
+	console.log(data);
+};
 setFeaturesContent();
 setPricesContent(prices, plan);
 setQuestionsContent();
@@ -201,3 +219,4 @@ dropdownIcon.addEventListener('click', ShowDropdownList);
 menuIcon.addEventListener('click', showMenuList);
 CloseIcon.addEventListener('click', hideMenList);
 if (phone) phone.addEventListener('keydown', makeInputNumbers);
+form.addEventListener('submit', handleSubmit);

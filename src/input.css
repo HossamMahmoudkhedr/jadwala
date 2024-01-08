@@ -94,6 +94,16 @@
 		outline: none;
 		border: none;
 	}
+	form div.error .styled-input {
+		border: 1px solid rgb(239, 68, 68);
+		color: rgb(239, 68, 68);
+	}
+	form div.error .styled-input select {
+		color: black;
+	}
+	form div.error .error-message {
+		display: block;
+	}
 	select {
 		font-size: 14px;
 	}
